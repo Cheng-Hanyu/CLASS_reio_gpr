@@ -1,0 +1,8 @@
+README
+setup.py
+/Users/mac/class_gp/python/../python/classy.pyx
+/Users/mac/class_public-3.2.3/python/../python/classy.pyx
+classy.egg-info/PKG-INFO
+classy.egg-info/SOURCES.txt
+classy.egg-info/dependency_links.txt
+classy.egg-info/top_level.txt

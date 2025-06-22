@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "history.h": "c",
+        "hyrectools.h": "c",
+        "helium.h": "c",
+        "complex": "c"
+    }
+}
