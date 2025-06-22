@@ -9,10 +9,9 @@ This modified code also introduces two new derived parameters:
 * **tau_lowz and tau_highz**: These parameters extend reionization reconstruction and constraint to before recombination, splitting the total optical depth into contributions from both high and low redshift ranges.
 
 ## Key Modifications
-
-This modified code introduces enhanced interpolation methods for reionization:
-* **class_onen**: This method uses equally spaced bins for interpolation, primarily suited for the reconstruction of tau_lowz.
-* **class_gp**: This method implements an adaptive bin interpolation approach, enabling the comprehensive calculation of tau_lowz, tau_highz, and tau_total.
+There are two different modified version. 
+* **class_onen**: This version uses equally spaced bins for interpolation, primarily suited for the reconstruction of tau_lowz.
+* **class_gp**: This version implements an adaptive bin interpolation approach, enabling the comprehensive calculation of tau_lowz, tau_highz, and tau_total.
 
 For more detailed information, please refer to our upcoming paper: **Cheng et al. (2025)**.
 
