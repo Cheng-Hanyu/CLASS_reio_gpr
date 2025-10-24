@@ -1,0 +1,393 @@
+theory:
+  classy:
+    path: /users/smq24hc/cosmo/code/classy
+    extra_args:
+      non_linear: halofit
+      nonlinear_min_k_max: 20
+      N_ncdm: 1
+      N_ur: 2.0328
+      reio_parametrization: reio_gpr_tanh
+      gpr_reio_num: 20
+      output: tCl lCl pCl
+      lensing: 'yes'
+      l_max_scalars: 29
+likelihood:
+  planck_2018_lowl.EE_clik:
+    clik_file: /users/smq24hc/cosmo/data/planck_2018/baseline/plc_3.0/low_l/simall/simall_100x143_offlike5_EE_Aplanck_B.clik
+params:
+  n_low_float:
+    prior:
+      min: 2
+      max: 5
+    ref: 3
+    latex: n_\mathrm{low,float}
+    drop: true
+  n_high_float:
+    prior:
+      min: 10
+      max: 20
+    ref: 15
+    latex: n_\mathrm{high,float}
+    drop: true
+  gpr_n_low:
+    value: 'lambda n_low_float: int(n_low_float)'
+    latex: n_\mathrm{low}
+  gpr_n_high:
+    value: 'lambda n_high_float: int(n_high_float)'
+    latex: n_\mathrm{high}
+  gpr_z_transition:
+    prior:
+      min: 10.0
+      max: 50.0
+    ref: 20.0
+    latex: z_\mathrm{transition}
+  gpr_reio_step_sharpness:
+    prior:
+      min: 0.1
+      max: 1.0
+    ref: 0.5
+    latex: \alpha_\mathrm{sharp}
+  gpr_sigma_f:
+    prior:
+      min: 0.1
+      max: 1.0
+    ref: 0.5
+    latex: \sigma_\mathrm{f}
+  gpr_l:
+    prior:
+      min: 2.0
+      max: 30.0
+    ref: 5.0
+    latex: l_\mathrm{gpr}
+  gpr_z_min:
+    prior:
+      min: 4.0
+      max: 8.0
+    ref: 6.0
+    latex: z_\mathrm{min}
+  gpr_z_max:
+    prior:
+      min: 700.0
+      max: 800.0
+    ref: 750.0
+    latex: z_\mathrm{max}
+  z1:
+    prior:
+      min: 4.0
+      max: 8.0
+    ref: 6.0
+    latex: z1
+    drop: true
+  z2:
+    prior:
+      min: 8.1
+      max: 25.0
+    ref: 15.0
+    latex: z2
+    drop: true
+  z3:
+    prior:
+      min: 25.1
+      max: 64.3
+    ref: 44.7
+    latex: z3
+    drop: true
+  z4:
+    prior:
+      min: 64.4
+      max: 103.6
+    ref: 84.0
+    latex: z4
+    drop: true
+  z5:
+    prior:
+      min: 103.7
+      max: 142.9
+    ref: 123.3
+    latex: z5
+    drop: true
+  z6:
+    prior:
+      min: 143.0
+      max: 182.2
+    ref: 162.6
+    latex: z6
+    drop: true
+  z7:
+    prior:
+      min: 182.3
+      max: 221.5
+    ref: 201.9
+    latex: z7
+    drop: true
+  z8:
+    prior:
+      min: 221.6
+      max: 260.8
+    ref: 241.2
+    latex: z8
+    drop: true
+  z9:
+    prior:
+      min: 260.9
+      max: 300.1
+    ref: 280.5
+    latex: z9
+    drop: true
+  z10:
+    prior:
+      min: 300.2
+      max: 339.4
+    ref: 319.8
+    latex: z10
+    drop: true
+  z11:
+    prior:
+      min: 339.5
+      max: 378.7
+    ref: 359.1
+    latex: z11
+    drop: true
+  z12:
+    prior:
+      min: 378.8
+      max: 418.0
+    ref: 398.4
+    latex: z12
+    drop: true
+  z13:
+    prior:
+      min: 418.1
+      max: 457.3
+    ref: 437.7
+    latex: z13
+    drop: true
+  z14:
+    prior:
+      min: 457.4
+      max: 496.6
+    ref: 477.0
+    latex: z14
+    drop: true
+  z15:
+    prior:
+      min: 496.7
+      max: 535.9
+    ref: 516.3
+    latex: z15
+    drop: true
+  z16:
+    prior:
+      min: 536.0
+      max: 575.2
+    ref: 555.6
+    latex: z16
+    drop: true
+  z17:
+    prior:
+      min: 575.3
+      max: 614.5
+    ref: 594.9
+    latex: z17
+    drop: true
+  z18:
+    prior:
+      min: 614.6
+      max: 653.8
+    ref: 634.2
+    latex: z18
+    drop: true
+  z19:
+    prior:
+      min: 653.9
+      max: 693.1
+    ref: 673.5
+    latex: z19
+    drop: true
+  z20:
+    prior:
+      min: 693.2
+      max: 800.0
+    ref: 746.6
+    latex: z20
+    drop: true
+  xe1:
+    prior:
+      min: 1.0e-05
+      max: 1.05
+    ref: 1.05
+    latex: xe1
+    drop: true
+  xe2:
+    prior:
+      min: 1.0e-05
+      max: 1.05
+    ref: 0.1
+    latex: xe2
+    drop: true
+  log_xe3:
+    prior:
+      min: -5.0
+      max: 0.021
+    ref: -5.0
+    latex: \log_{10}(xe3)
+    drop: true
+  log_xe4:
+    prior:
+      min: -5.0
+      max: 0.021
+    ref: -5.0
+    latex: \log_{10}(xe4)
+    drop: true
+  log_xe5:
+    prior:
+      min: -5.0
+      max: 0.021
+    ref: -5.0
+    latex: \log_{10}(xe5)
+    drop: true
+  log_xe6:
+    prior:
+      min: -5.0
+      max: 0.021
+    ref: -5.0
+    latex: \log_{10}(xe6)
+    drop: true
+  log_xe7:
+    prior:
+      min: -5.0
+      max: 0.021
+    ref: -5.0
+    latex: \log_{10}(xe7)
+    drop: true
+  log_xe8:
+    prior:
+      min: -5.0
+      max: 0.021
+    ref: -5.0
+    latex: \log_{10}(xe8)
+    drop: true
+  log_xe9:
+    prior:
+      min: -5.0
+      max: 0.021
+    ref: -5.0
+    latex: \log_{10}(xe9)
+    drop: true
+  log_xe10:
+    prior:
+      min: -5.0
+      max: 0.021
+    ref: -5.0
+    latex: \log_{10}(xe10)
+    drop: true
+  log_xe11:
+    prior:
+      min: -5.0
+      max: 0.021
+    ref: -5.0
+    latex: \log_{10}(xe11)
+    drop: true
+  log_xe12:
+    prior:
+      min: -5.0
+      max: 0.021
+    ref: -5.0
+    latex: \log_{10}(xe12)
+    drop: true
+  log_xe13:
+    prior:
+      min: -5.0
+      max: 0.021
+    ref: -5.0
+    latex: \log_{10}(xe13)
+    drop: true
+  log_xe14:
+    prior:
+      min: -5.0
+      max: 0.021
+    ref: -5.0
+    latex: \log_{10}(xe14)
+    drop: true
+  log_xe15:
+    prior:
+      min: -5.0
+      max: 0.021
+    ref: -5.0
+    latex: \log_{10}(xe15)
+    drop: true
+  log_xe16:
+    prior:
+      min: -5.0
+      max: 0.021
+    ref: -5.0
+    latex: \log_{10}(xe16)
+    drop: true
+  log_xe17:
+    prior:
+      min: -5.0
+      max: 0.021
+    ref: -5.0
+    latex: \log_{10}(xe17)
+    drop: true
+  log_xe18:
+    prior:
+      min: -5.0
+      max: 0.021
+    ref: -5.0
+    latex: \log_{10}(xe18)
+    drop: true
+  log_xe19:
+    prior:
+      min: -5.0
+      max: 0.021
+    ref: -5.0
+    latex: \log_{10}(xe19)
+    drop: true
+  log_xe20:
+    prior:
+      min: -5.0
+      max: 0.021
+    ref: -5.0
+    latex: \log_{10}(xe20)
+    drop: true
+  gpr_reio_z:
+    value: 'lambda z1, z2, z3, z4, z5, z6, z7, z8, z9, z10, z11, z12, z13, z14, z15,
+      z16, z17, z18, z19, z20: f''{z1:.3f},{z2:.3f},{z3:.3f},{z4:.3f},{z5:.3f},{z6:.3f},{z7:.3f},{z8:.3f},{z9:.3f},{z10:.3f},{z11:.3f},{z12:.3f},{z13:.3f},{z14:.3f},{z15:.3f},{z16:.3f},{z17:.3f},{z18:.3f},{z19:.3f},{z20:.3f}'''
+    derived: false
+    latex: z_\mathrm{gpr}
+  gpr_reio_xe:
+    value: 'lambda xe1, xe2, log_xe3, log_xe4, log_xe5, log_xe6, log_xe7, log_xe8,
+      log_xe9, log_xe10, log_xe11, log_xe12, log_xe13, log_xe14, log_xe15, log_xe16,
+      log_xe17, log_xe18, log_xe19, log_xe20: f''{xe1:.6f},{xe2:.6f},{(10**log_xe3):.6f},{(10**log_xe4):.6f},{(10**log_xe5):.6f},{(10**log_xe6):.6f},{(10**log_xe7):.6f},{(10**log_xe8):.6f},{(10**log_xe9):.6f},{(10**log_xe10):.6f},{(10**log_xe11):.6f},{(10**log_xe12):.6f},{(10**log_xe13):.6f},{(10**log_xe14):.6f},{(10**log_xe15):.6f},{(10**log_xe16):.6f},{(10**log_xe17):.6f},{(10**log_xe18):.6f},{(10**log_xe19):.6f},{(10**log_xe20):.6f}'''
+    derived: false
+    latex: xe_\mathrm{gpr}
+  tau_reio:
+    derived: true
+    latex: \tau_\mathrm{reio}
+  n_s:
+    value: 0.9649
+    latex: n_\mathrm{s}
+  H0:
+    value: 67.27
+    latex: H_0
+  omega_b:
+    value: 0.02236
+    latex: \Omega_\mathrm{b}h^2
+  omega_cdm:
+    value: 0.1202
+    latex: \Omega_\mathrm{c}h^2
+  A_planck:
+    value: 1.0
+    latex: A_\mathrm{planck}
+  A_s:
+    value: 2.101e-09
+    latex: A_\mathrm{s}
+sampler:
+  mcmc:
+    oversample_power: 0.4
+    proposal_scale: 1.9
+    covmat: auto
+    Rminus1_stop: 0.01
+    Rminus1_cl_stop: 0.2
+output: gpr_general

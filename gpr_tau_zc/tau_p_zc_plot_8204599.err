@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+There are messages associated with the following module(s):
+-------------------------------------------------------------------------------
+
+Anaconda3/2022.10:
+   We recommend that you use the following 2022 (sub)version of Anaconda3 -
+   "Anaconda3/2022.05". The latest module, Anaconda3/2022.10, is under
+   investigation as this has demonstrated odd behaviour on conda environment
+   exit (for some users). We will investigate this, and advise in due
+   course.
+
+-------------------------------------------------------------------------------
+
+/var/spool/slurmd.spool/job8204599/slurm_script: line 34: 52682 Segmentation fault      python tau_p_zc_plot.py
