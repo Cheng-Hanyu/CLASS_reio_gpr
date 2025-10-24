@@ -13,16 +13,22 @@ There are two different modified version.
 * **class_onen**: This version uses equally spaced bins for interpolation, primarily suited for the reconstruction of tau_lowz.
 * **class_gp**: This version implements an adaptive bin interpolation approach, enabling the comprehensive calculation of tau_lowz, tau_highz, and tau_total.
 
-For more detailed information, please refer to our upcoming paper: **Cheng et al. (2025)**.
+For more detailed information, please refer to our paper: **Cheng et al. (2025)**: [arXiv:2506.19096](https://arxiv.org/abs/2506.19096).
 
 The main modifications to the original CLASS code are in input.c, thermodynamics.c, and thermodynamics.h. These changes are clearly marked with "Hanyu" in the comments.
 
 ## Citation
 
 This code is freely available for use. If you use this code in your research, please cite both:
-* **Cheng et al. (2025)** (to be released soon)
+* **Cheng et al. (2025)**: [arXiv:2506.19096](https://arxiv.org/abs/2506.19096)
 * The original CLASS release paper: [**Blas et al. (2011)**](https://arxiv.org/abs/1104.2933)
 
-## Future Releases
+## Results and Data
 
-The results folder, which will include related test Python files, .yaml files, and chains, will be released soon.
+The following folders contain results and analysis code from **Cheng et al. (2025)**:
+
+* **gpr_general**: Includes four converged MCMC chains (R < 0.1), the corresponding `.yaml` configuration file, and a shell script to reproduce the MCMC analysis.
+
+* **gpr_plot**: Python scripts for reconstructing and visualizing the reionization history (X_e as a function of redshift z from z = 0 to z = 800) from the MCMC chains. Reproduces FIG 1 from the paper.
+
+* **gpr_tau_zc**: Python scripts for computing posterior distributions of tau_lowz and tau_highz for different redshift cutoff values (z_c), and the total optical depth tau_total. Generates 1σ and 2σ posterior constraints corresponding to TABLE 3, FIG 2, and FIG S3 in the paper.
